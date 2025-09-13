@@ -4,7 +4,7 @@ import { Link } from "react-router";
 export default function Footer() {
   return (
     <footer className="bg-green-700 text-white mt-8">
-      <div className="max-w-6xl mx-auto px-3 py-3 center grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-6xl mx-auto px-3 py-3 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Profil singkat */}
         <div>
           <h2 className="text-lg font-bold mb-3">Desa Panaikang</h2>

@@ -20,19 +20,18 @@ const sampleData: DemografiData = {
   totalPenduduk: 3250,
   totalKK: 820,
   mataPencaharian: {
-    "Petani": 380,
-    "Nelayan": 120,
-    "Pedagang": 210,
+    Petani: 380,
+    Nelayan: 120,
+    Pedagang: 210,
     "PNS/ASN": 45,
-    "Wiraswasta": 60,
-    "Buruh": 90,
-    "Lainnya": 15,
+    Wiraswasta: 60,
+    Buruh: 90,
+    Lainnya: 15,
   },
   households: [
     { id: "KK-001", namaKepala: "Ahmad", jumlahAnggota: 5, pekerjaan: "Petani", alamat: "Dusun A" },
     { id: "KK-002", namaKepala: "Siti", jumlahAnggota: 4, pekerjaan: "Pedagang", alamat: "Dusun B" },
     { id: "KK-003", namaKepala: "Budi", jumlahAnggota: 3, pekerjaan: "Nelayan", alamat: "Dusun A" },
-    // ... tambahkan sesuai kebutuhan
   ],
 };
 
@@ -40,11 +39,7 @@ function numberWithSeparator(n: number) {
   return n.toLocaleString("id-ID");
 }
 
-export default function Demografi({
-  data = sampleData,
-}: {
-  data?: DemografiData;
-}) {
+export default function Demografi({ data = sampleData }: { data?: DemografiData }) {
   const [q, setQ] = useState("");
   const [filterJob, setFilterJob] = useState<string>("Semua");
 
@@ -69,7 +64,6 @@ export default function Demografi({
   const maxJobCount = Math.max(...Object.values(data.mataPencaharian), 1);
 
   function exportCSV() {
-    // Buat CSV sederhana dari households
     const headers = ["ID KK", "Nama Kepala", "Jumlah Anggota", "Pekerjaan", "Alamat"];
     const rows = data.households.map((h) => [
       h.id,
@@ -85,21 +79,25 @@ export default function Demografi({
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `demografi_kk_${new Date().toISOString().slice(0,10)}.csv`;
+    a.download = `demografi_kk_${new Date().toISOString().slice(0, 10)}.csv`;
     a.click();
     URL.revokeObjectURL(url);
   }
 
   return (
     <div className="w-full max-w-6xl mx-auto px-4 py-8">
+      {/* Header */}
       <header className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
         <div>
           <h1 className="text-2xl md:text-3xl font-extrabold text-gray-900">Data Demografi Desa</h1>
-          <p className="text-sm text-gray-600">Ringkasan jumlah penduduk, rumah tangga (KK) dan mata pencaharian.</p>
+          <p className="text-sm text-gray-600">
+            Ringkasan jumlah penduduk, rumah tangga (KK) dan mata pencaharian.
+          </p>
         </div>
 
         <div className="flex gap-3 items-center">
-          <div className="hidden sm:flex gap-2">
+          {/* Filter versi desktop */}
+          <div className="hidden md:flex gap-2">
             <input
               value={q}
               onChange={(e) => setQ(e.target.value)}
@@ -173,13 +171,14 @@ export default function Demografi({
       <section className="bg-white rounded-2xl p-4 shadow border border-gray-100">
         <div className="flex items-center justify-between mb-4">
           <h3 className="font-semibold text-lg">Daftar KK</h3>
-          <div className="sm:hidden flex gap-2">
-            {/* versi mobile: masukkan input/select ringkas */}
+
+          {/* Filter versi mobile */}
+          <div className="flex md:hidden gap-2">
             <input
               value={q}
               onChange={(e) => setQ(e.target.value)}
               placeholder="Cari..."
-              className="rounded-lg border border-gray-300 px-3 py-2 w-40 focus:outline-none focus:ring-2 focus:ring-green-600"
+              className="rounded-lg border border-gray-300 px-3 py-2 w-32 focus:outline-none focus:ring-2 focus:ring-green-600"
             />
             <select
               value={filterJob}
@@ -229,7 +228,9 @@ export default function Demografi({
         </div>
 
         <div className="mt-4 flex justify-between items-center">
-          <p className="text-sm text-gray-500">Menampilkan {filteredHouseholds.length} dari {data.households.length} KK</p>
+          <p className="text-sm text-gray-500">
+            Menampilkan {filteredHouseholds.length} dari {data.households.length} KK
+          </p>
           <div className="text-sm text-gray-500">Sumber: Data Lokal</div>
         </div>
       </section>
