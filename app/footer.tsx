@@ -14,17 +14,6 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Navigasi cepat */}
-        <div>
-          <h2 className="text-lg font-bold mb-3">Navigasi</h2>
-          <ul className="space-y-2 text-sm">
-            <li><Link to="/" className="hover:underline">Beranda</Link></li>
-            <li><Link to="/berita" className="hover:underline">Berita</Link></li>
-            <li><Link to="/produk" className="hover:underline">Produk</Link></li>
-            <li><Link to="/kontak" className="hover:underline">Kontak</Link></li>
-          </ul>
-        </div>
-
         {/* Kontak singkat */}
         <div>
           <h2 className="text-lg font-bold mb-3">Kontak</h2>
