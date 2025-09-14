@@ -96,26 +96,48 @@ export default function Demografi({ data = sampleData }: { data?: DemografiData 
         </div>
 
         <div className="flex gap-3 items-center">
-          {/* Filter versi desktop */}
-          <div className="hidden md:flex gap-2">
-            <input
-              value={q}
-              onChange={(e) => setQ(e.target.value)}
-              placeholder="Cari KK / nama kepala / alamat..."
-              className="rounded-lg border border-gray-300 px-3 py-2 w-64 focus:outline-none focus:ring-2 focus:ring-green-600"
-            />
-            <select
-              value={filterJob}
-              onChange={(e) => setFilterJob(e.target.value)}
-              className="rounded-lg border border-gray-300 px-3 py-2 focus:outline-none"
-            >
-              {jobList.map((j) => (
-                <option key={j} value={j}>
-                  {j}
-                </option>
-              ))}
-            </select>
-          </div>
+         {/* Filter versi desktop */}
+<div className="hidden md:flex gap-2">
+  <input
+    value={q}
+    onChange={(e) => setQ(e.target.value)}
+    placeholder="Cari KK / nama kepala / alamat..."
+    className="rounded-lg border border-gray-300 px-3 py-2 w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-green-600"
+  />
+  <select
+    value={filterJob}
+    onChange={(e) => setFilterJob(e.target.value)}
+    className="rounded-lg border border-gray-300 px-3 py-2 w-full md:w-40 focus:outline-none"
+  >
+    {jobList.map((j) => (
+      <option key={j} value={j}>
+        {j}
+      </option>
+    ))}
+  </select>
+</div>
+
+{/* Filter versi mobile */}
+<div className="flex md:hidden gap-2 w-full">
+  <input
+    value={q}
+    onChange={(e) => setQ(e.target.value)}
+    placeholder="Cari..."
+    className="rounded-lg border border-gray-300 px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-green-600"
+  />
+  <select
+    value={filterJob}
+    onChange={(e) => setFilterJob(e.target.value)}
+    className="rounded-lg border border-gray-300 px-3 py-2 w-32 sm:w-40 focus:outline-none"
+  >
+    {jobList.map((j) => (
+      <option key={j} value={j}>
+        {j}
+      </option>
+    ))}
+  </select>
+</div>
+
 
           <button
             onClick={exportCSV}
