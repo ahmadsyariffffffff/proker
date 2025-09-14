@@ -128,7 +128,7 @@ export default function Demografi({ data = sampleData }: { data?: DemografiData 
   <select
     value={filterJob}
     onChange={(e) => setFilterJob(e.target.value)}
-    className="rounded-lg border border-gray-300 px-3 py-2 w-32 sm:w-40 focus:outline-none"
+    className="rounded-lg border border-gray-300 px-3 py-4 w-32 sm:w-40 focus:outline-none"
   >
     {jobList.map((j) => (
       <option key={j} value={j}>
