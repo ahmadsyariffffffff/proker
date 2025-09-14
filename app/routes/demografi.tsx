@@ -195,25 +195,20 @@ export default function Demografi({ data = sampleData }: { data?: DemografiData 
           <h3 className="font-semibold text-lg">Daftar KK</h3>
 
           {/* Filter versi mobile */}
-          <div className="flex md:hidden gap-2">
-            <input
-              value={q}
-              onChange={(e) => setQ(e.target.value)}
-              placeholder="Cari..."
-              className="rounded-lg border border-gray-300 px-3 py-2 w-32 focus:outline-none focus:ring-2 focus:ring-green-600"
-            />
-            <select
-              value={filterJob}
-              onChange={(e) => setFilterJob(e.target.value)}
-              className="rounded-lg border border-gray-300 px-3 py-2 focus:outline-none"
-            >
-              {jobList.map((j) => (
-                <option key={j} value={j}>
-                  {j}
-                </option>
-              ))}
-            </select>
-          </div>
+<div className="flex md:hidden gap-2 w-full">
+  <select
+    value={filterJob}
+    onChange={(e) => setFilterJob(e.target.value)}
+    className="rounded-lg border border-gray-300 px-3 py-2 w-full focus:outline-none"
+  >
+    {jobList.map((j) => (
+      <option key={j} value={j}>
+        {j}
+      </option>
+    ))}
+  </select>
+</div>
+
         </div>
 
         <div className="overflow-x-auto">
