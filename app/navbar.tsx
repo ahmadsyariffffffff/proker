@@ -53,6 +53,7 @@ export default function Navbar() {
                 <Link to="/demografi" className="block px-4 py-2 hover:bg-gray-200" onClick={() => setOpenMenu(null)}>Data Demografi</Link>
                 <Link to="/lembaga" className="block px-4 py-2 hover:bg-gray-200" onClick={() => setOpenMenu(null)}>Lembaga Desa</Link>
                 <Link to="/proker" className="block px-4 py-2 hover:bg-gray-200" onClick={() => setOpenMenu(null)}>Program Kerja</Link>
+                <Link to="/proker" className="block px-4 py-2 hover:bg-gray-200" onClick={() => setOpenMenu(null)}>Program Kerja</Link>
               </div>
             )}
           </div>
