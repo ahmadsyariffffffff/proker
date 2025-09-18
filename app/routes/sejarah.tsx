@@ -6,7 +6,7 @@ export default function Sejarah() {
     <div className="p-6 max-w-5xl mx-auto space-y-8">
       {/* Header */}
       <header className="text-center">
-        <h1 className="text-3xl text-center font-extrabold text-gray-800 mb-2">
+        <h1 className="text-3xl font-extrabold text-gray-800 mb-2">
           Sejarah Desa
         </h1>
         <p className="text-gray-600">
