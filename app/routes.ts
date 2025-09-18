@@ -24,5 +24,4 @@ export default [
     route("/fotodokumentasi", "routes/fotodokumentasi.tsx"),
     route("/video", "routes/video.tsx"),
     route("/halaman", "routes/halaman.tsx"),
-    route("/peta2", "routes/peta2.tsx"),
 ] satisfies RouteConfig;
