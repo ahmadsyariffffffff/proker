@@ -3,11 +3,11 @@ import React from "react";
 export default function DataUmkm() {
   const umkmList = [
     {
-      nama: "Warung Makan Sederhana",
+      nama: "Abon",
       jenis: "Kuliner",
-      produk: "Nasi Goreng, Mie Goreng, Ayam Lalapan",
+      produk: "Abon Ikan Gabus",
       kontak: "6281234567890",
-      gambar: "https://via.placeholder.com/300x200.png?text=Kuliner",
+      gambar: "/abon.jpg",
     },
     {
       nama: "Kerajinan Rotan Makmur",
