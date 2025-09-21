@@ -34,29 +34,31 @@ export default function Home() {
             </p>
           </section>
 
-          {/* Banner / Foto Desa */}
-          <section>
-            <h2 className="text-2xl font-semibold mb-2 text-white">
-              Kegiatan & Dokumentasi
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <img
-                src="/desa.jpg"
-                alt="Banner Desa"
-                className="rounded-xl shadow-md transform transition duration-300 hover:scale-105"
-              />
-              <img
-                src="/tusuk botol.jpg"
-                alt="Kegiatan Desa"
-                className="rounded-xl shadow-md transform transition duration-300 hover:scale-105"
-              />
-              <img
-                src="/abon.jpg"
-                alt="Kegiatan Desa"
-                className="rounded-xl shadow-md transform transition duration-300 hover:scale-105"
-              />
-            </div>
-          </section>
+{/* Banner / Foto Desa */}
+<section>
+  <h2 className="text-2xl font-semibold mb-2 text-white">
+    Kegiatan & Dokumentasi
+  </h2>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    {[
+      { src: "/desa.jpg", alt: "Banner Desa" },
+      { src: "/tusuk botol.jpg", alt: "Kegiatan Desa" },
+      { src: "/abon.jpg", alt: "Kegiatan Desa" },
+    ].map((img, idx) => (
+      <div
+        key={idx}
+        className="h-60 w-full overflow-hidden rounded-xl shadow-md"
+      >
+        <img
+          src={img.src}
+          alt={img.alt}
+          className="w-full h-full object-cover transform transition duration-300 hover:scale-105"
+        />
+      </div>
+    ))}
+  </div>
+</section>
+
         </div>
       </div>
     </div>
