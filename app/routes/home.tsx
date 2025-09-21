@@ -46,12 +46,12 @@ export default function Home() {
                 className="rounded-xl shadow-md transform transition duration-300 hover:scale-105"
               />
               <img
-                src="https://placehold.co/400x250?text=Kegiatan+1"
+                src="/tusuk botol.jpg"
                 alt="Kegiatan Desa"
                 className="rounded-xl shadow-md transform transition duration-300 hover:scale-105"
               />
               <img
-                src="https://placehold.co/400x250?text=Kegiatan+2"
+                src="/abon.jpg"
                 alt="Kegiatan Desa"
                 className="rounded-xl shadow-md transform transition duration-300 hover:scale-105"
               />
