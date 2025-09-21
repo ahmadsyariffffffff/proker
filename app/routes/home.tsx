@@ -37,20 +37,23 @@ export default function Home() {
           <h2 className="text-2xl font-semibold mb-2 text-white">Kegiatan & Dokumentasi</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <img
-              src="/desa.jpg"
-              alt="Banner Desa"
-              className="rounded-xl shadow-md"
-            />
-            <img
-              src="https://placehold.co/400x250?text=Kegiatan+1"
-              alt="Kegiatan Desa"
-              className="rounded-xl shadow-md"
-            />
-            <img
-              src="https://placehold.co/400x250?text=Kegiatan+2"
-              alt="Kegiatan Desa"
-              className="rounded-xl shadow-md"
-            />
+  src="/desa.jpg"
+  alt="Banner Desa"
+  className="rounded-xl shadow-md transform transition duration-300 hover:scale-105"
+/>
+
+<img
+  src="https://placehold.co/400x250?text=Kegiatan+1"
+  alt="Kegiatan Desa"
+  className="rounded-xl shadow-md transform transition duration-300 hover:scale-105"
+/>
+
+<img
+  src="https://placehold.co/400x250?text=Kegiatan+2"
+  alt="Kegiatan Desa"
+  className="rounded-xl shadow-md transform transition duration-300 hover:scale-105"
+/>
+
           </div>
         </section>
       </div>
