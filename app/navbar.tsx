@@ -23,7 +23,16 @@ export default function Navbar() {
     <nav className="bg-green-700 text-white shadow-md fixed top-0 left-0 w-full z-50">
       <div className="max-w-7xl mx-auto px-4 flex justify-between h-16 items-center">
         {/* Logo */}
-        <div className="font-bold">🌾 Desa Panaikang</div>
+        {/* Logo */}
+<div className="flex items-center space-x-2 font-bold">
+  <img
+    src="/logo.png" // ganti dengan path logo kamu
+    alt="Logo Desa"
+    className="h-8 w-8 object-contain"
+  />
+  <span>Desa Panaikang</span>
+</div>
+
 
         {/* Tombol hamburger untuk HP */}
         <button
