@@ -16,7 +16,6 @@ export default function DataKependudukan() {
     ],
     pekerjaan: [
       { jenis: "Petani", jumlah: 800 },
-      { jenis: "Nelayan", jumlah: 150 },
       { jenis: "Pedagang", jumlah: 200 },
       { jenis: "PNS", jumlah: 50 },
       { jenis: "Lainnya", jumlah: 100 },
