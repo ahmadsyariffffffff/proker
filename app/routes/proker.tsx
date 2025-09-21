@@ -24,10 +24,6 @@ export default function ProgramKerjaKebijakan() {
 
   const kebijakan = [
     {
-      judul: "Kebijakan Pengelolaan Dana Desa",
-      isi: "Transparansi penggunaan dana desa dengan laporan terbuka kepada masyarakat.",
-    },
-    {
       judul: "Kebijakan Lingkungan",
       isi: "Program penghijauan dan pengelolaan sampah terpadu.",
     },

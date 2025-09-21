@@ -7,11 +7,6 @@ export default function ProgramKerjaPage() {
     { bidang: "Kesehatan", kegiatan: "Posyandu & bantuan gizi balita", tahun: "2025" },
   ];
 
-  const kebijakan = [
-    { judul: "Transparansi Dana Desa", isi: "Laporan keuangan dipublikasikan rutin setiap 6 bulan." },
-    { judul: "Digitalisasi Administrasi", isi: "Pelayanan surat menyurat melalui aplikasi desa online." },
-  ];
-
   const indikator = [
     { nama: "Akses jalan desa", progress: 70 },
     { nama: "Anak usia sekolah bersekolah", progress: 85 },
@@ -75,19 +70,6 @@ export default function ProgramKerjaPage() {
             ))}
           </tbody>
         </table>
-      </section>
-
-      {/* Kebijakan */}
-      <section>
-        <h2 className="text-2xl font-semibold mb-3">Kebijakan Desa</h2>
-        <div className="space-y-3">
-          {kebijakan.map((k, idx) => (
-            <div key={idx} className="bg-white shadow rounded-xl p-4">
-              <h3 className="font-bold">{k.judul}</h3>
-              <p className="text-gray-600">{k.isi}</p>
-            </div>
-          ))}
-        </div>
       </section>
 
       {/* Indikator */}
