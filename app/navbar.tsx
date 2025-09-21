@@ -26,7 +26,7 @@ export default function Navbar() {
         {/* Logo */}
 <div className="flex items-center space-x-2 font-bold">
   <img
-    src="/public/Lambang-Pemkab-Gowa-edit.jpg" // ganti dengan path logo kamu
+    src="/Lambang-Pemkab-Gowa-edit.jpg" 
     alt="Logo Desa"
     className="h-8 w-8 object-contain"
   />
