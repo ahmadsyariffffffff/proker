@@ -31,10 +31,9 @@ export default function Sejarah() {
       <section className="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">
         <h2 className="text-xl font-semibold text-green-700 mb-3">Visi</h2>
         <p className="text-gray-700 leading-relaxed">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
-          corrupti iusto, saepe neque expedita obcaecati, officia commodi qui,
-          blanditiis provident molestias. Possimus tempora fugiat hic,
-          reiciendis corrupti quidem ex molestiae!
+          “Terwujudnya Panaikang sebagai Desa yang mandiri berbasis Pertanian, 
+          Perkebunan, Perikanan, Perdagangan dan Perindustrian untuk mencapai 
+          masyarakat yang sehat, cerdas dan lebih sejahtera.”
         </p>
       </section>
 
@@ -42,8 +41,13 @@ export default function Sejarah() {
       <section className="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">
         <h2 className="text-xl font-semibold text-green-700 mb-3">Misi</h2>
         <p className="text-gray-700 leading-relaxed">
-          Misi kami adalah menjadikan desa ini lebih maju, mandiri, dan
-          sejahtera.
+        1.	Meningkatkan pembangunan infrastruktur yang mendukung perekonomian desa,seperti jalan, jembatan serta infrastruktur strategis lainnya 
+        2.	Meningkatkan pembangunan dibidang kesehatan untuk mendorong derajat Kesehatan masyarakat agar dapat bekerja lebih optimal dan memiliki harapanhidup yang lebih panjang.
+        3.	Meningkatkan pembangunan dibidang pendidikan untuk mendorong peningkatan kualitas sumber daya manusia agar memiliki kecerdasan dan daya saing yanglebih baik.
+        4.	Meningkatkan pembangunan ekonomi dengan mendorong semakin tumbuh dan   berkembangnya pembangunan dibidang pertanian dalam arti luas, industri, perdagangan dan pariwisata.
+        5.	Menciptakan tata kelola pemerintahan yang baik (good governance) berdasarkan demokratisasi, transparansi, penegakan hukum,berkeadilan, kesetaraan gender dan mengutamakan pelayanankepada masyarakat.
+        6.	Mengupayakan pelestarian sumber daya alam untuk memenuhi kebutuhandan pemerataan pembangunan guna meningkatkan perekonomian.
+            <br>buatkan dalam bentuk paragraf</br>
         </p>
       </section>
 
