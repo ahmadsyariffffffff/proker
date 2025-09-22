@@ -1,17 +1,20 @@
 import { Link } from "react-router-dom";
 export default function Bpd() {
   const anggota = [
-    { nama: "Ahmad", jabatan: "Ketua" },
-    { nama: "Siti", jabatan: "Wakil Ketua" },
-    { nama: "Budi", jabatan: "Sekretaris" },
-    { nama: "Dewi", jabatan: "Anggota" },
+    { nama: "Tasrib Dg.Tutu", jabatan: "Ketua" },
+     { nama: "Jumsah", jabatan: "Wakil Ketua" },
+      { nama: "Indah Purwati", jabatan: "Sekertaris" },
+       { nama: "Syam Suaib", jabatan: "Anggota" },
+        { nama: "Fatmawati", jabatan: "Anggota" },
+        { nama: "H.Haming Sanre", jabatan: "Anggota" },
+        { nama: "Junaedi Syam", jabatan: "Anggota" },
   ];
 
   return (
     <div className="p-6 max-w-4xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Badan Permusyawaratan Desa (BPD)</h1>
       <p className="mb-4 text-gray-700">
-        BPD berfungsi menampung aspirasi masyarakat dan mengawasi jalannya pemerintahan desa.
+        BPD berfungsi sebagai wadah perwujudan demokrasi dalam penyelengaran pemerintahan desa.
       </p>
 
       <h2 className="text-xl font-semibold mb-2">Struktur Organisasi</h2>

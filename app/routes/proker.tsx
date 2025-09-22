@@ -1,26 +1,62 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // ✅ ini yang benar
+import { Link } from "react-router-dom";
 
 export default function ProgramKerjaKebijakan() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const programKerja = {
-    "Bidang Pembangunan": [
-      "Pembangunan/rehab jalan desa",
-      "Pembangunan jembatan kecil",
-      "Penyediaan sarana air bersih",
-    ],
-    "Bidang Pendidikan": [
-      "Bantuan untuk PAUD/TK",
-      "Pelatihan keterampilan untuk pemuda",
-    ],
-    "Bidang Kesehatan": ["Posyandu dan imunisasi", "Layanan kesehatan ibu & anak"],
-    "Bidang Ekonomi": ["Pemberdayaan UMKM desa", "Bazar produk lokal"],
-    "Bidang Sosial & Budaya": [
-      "Kegiatan keagamaan & peringatan hari besar",
-      "Festival budaya desa",
-    ],
-  };
+  "A. Sub Bidang Pendidikan": [
+    "Pengadaan pagar sekolah SDI Balang Punia 150 M",
+    "Vevin blok lapangan upacara SD Balang Punia 25+45 M",
+    "Pengadaan vevin blok lapangan upacara SDI Dusun Biring Romang 30x50 M dan drainase 250 M",
+    "Pengadaan vevin Blok lapangan upacara SMP 1 Pattallassang 35x50 M",
+    "Pengadaan pagar SMP 1 Pattallassang 150 M",
+  ],
+  "B. Sub Bidang Kesehatan": [
+    "Pengadaan mobil ambulance desa",
+    "Pengadaan veving 15x20 M2 Pustu",
+    "Pengadaan pagar PUSTU 80 M",
+  ],
+  "C. Sub Bidang Perindustrian": [
+    "Pengadaan mesin jahit 20 unit",
+    "Pengadaan mesin parut kelapa 10 unit 5 dusun",
+    "Pengadaan perlengkapan perbengkelan",
+    "Pengadaan pasar desa Panaikang",
+  ],
+  "D. Sub Bidang Peternakan": [
+    "Pengadaan bibit sapi 50 ekor dan kandangnya",
+    "Pengadaan bibit itik sebanyak 5000 ekor",
+    "Pengadaan bibit ikan nila 10.000 ekor",
+  ],
+  "E. Sub Bidang Pertanian": [
+    "Pengadaan hendtraktor roda 4 sebanyak 5 unit",
+    "Pengadaan saluran irigasi 5000 M di 5 dusun",
+    "Pengadaan traktor dua roda 5 unit",
+    "Pengadaan bibit padi 50 ton untuk 27 kelompok tani",
+    "Pengadaan 50 ton bibit jagung untuk 27 kelompok tani",
+    "Pengadaan mesin pompa air 3 ml sebanyak 10 unit",
+    "Pengadaan mesin pompa air 8 ml sebanyak 10 unit",
+    "Pengadaan penggiling padi 5 unit",
+    "Pengadaan penggiling padi dan jagung",
+    "Pengadaan pupuk organik sebanyak 50 ton",
+    "Pengadaan jalan tani dan taludnya 350 M",
+    "Pengadaan mesin rumput sebanyak 5 unit",
+    "Pengadaan pagar kantor 85 M",
+  ],
+  "F. Sub Bidang Pekerjaan Umum dan Penataan Ruang": [
+    "Pengadaan sumur bor sebanyak 2 unit",
+    "Pengadaan gernase 3000 M di dusun Biring Romang, dusun Saile dan sertu",
+    "Pengadaan gernase 2000 M jalan poros dusun Balang Punia, dusun Je'netallassa dan sertu",
+    "Pengaspalan pengecoran jl poros provinsi Panaikang, Bu'rung-bu'rung 5 KM",
+    "Pengadaan pagar keliling lapangan Balang Punia 400 M2 dan pondasi keliling serta timbunannya",
+    "Pengaspalan 1000 M jl lorong desa Panaikang",
+  ],
+  "G. Sub Bidang Keagamaan": [
+    "Pengadaan gaji insentif imam desa dan imam dusun",
+    "Bantuan pembangunan pagar masjid 50 M",
+  ],
+};
+
 
   const kebijakan = [
     {

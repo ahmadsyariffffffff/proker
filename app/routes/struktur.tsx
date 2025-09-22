@@ -4,6 +4,7 @@ import { Search, Users, Network, ChevronDown, ChevronUp } from "lucide-react";
 
 const perangkat = [
   { nama: "Ismail G.SE", jabatan: "Kepala Desa", masajabatan: "2007-sekarang", pendidikan: "S1 Ekonomi" },
+  { nama: "Tasrib Dg.Tutu", jabatan: "BPD", masajabatan: "2018-sekarang", pendidikan: "SMA" },
   { nama: "Suriadi", jabatan: "Sekretaris Desa",masajabatan: "2000-sekarang", pendidikan: "S1" },
   { nama: "Nurwahidah", jabatan: "Kaur Keuangan", masaJabatan: "2022–Sekarang", pendidikan: "S1" },
   { nama: "Hamzah", jabatan: "Kaur Perencanaan", masaJabatan: "2015–Sekarang", pendidikan: "SMA" },
