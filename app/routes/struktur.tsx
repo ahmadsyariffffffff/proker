@@ -1,34 +1,24 @@
 import { useMemo, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Users, Network, ChevronDown, ChevronUp } from "lucide-react";
-import { img } from "framer-motion/client";
 
-// --- Dummy data: profil orang yang menjabat ---
 const perangkat = [
-  {
-    nama: "Ahmad",
-    jabatan: "Kepala Desa",
-    masaJabatan: "2021–2027",
-    pendidikan: "S1 Ilmu Pemerintahan",
-    img: "/ahmad.png",
-  },
-  {
-    nama: "Siti Nurhaliza",
-    jabatan: "Sekretaris Desa",
-    masaJabatan: "2019–Sekarang",
-    pendidikan: "SMA",
-  },
-  { nama: "Budi", jabatan: "Kaur Keuangan", masaJabatan: "2020–Sekarang", pendidikan: "D3 Akuntansi" },
-  { nama: "Intan", jabatan: "Kaur Umum & Perencanaan", masaJabatan: "2022–Sekarang", pendidikan: "S1 Adm. Publik" },
-  { nama: "Rizal", jabatan: "Kasi Pemerintahan", masaJabatan: "2020–Sekarang", pendidikan: "S1 Hukum" },
-  { nama: "Maya", jabatan: "Kasi Kesejahteraan", masaJabatan: "2021–Sekarang", pendidikan: "S1 Kesehatan Masyarakat" },
-  { nama: "Dewi", jabatan: "Kasi Pelayanan", masaJabatan: "2021–Sekarang", pendidikan: "S1 Komunikasi" },
-  { nama: "Hasan", jabatan: "Kepala Dusun A", masaJabatan: "2018–Sekarang", pendidikan: "SMA" },
-  { nama: "Nur", jabatan: "Kepala Dusun B", masaJabatan: "2019–Sekarang", pendidikan: "SMA" },
+  { nama: "Ismail G.SE", jabatan: "Kepala Desa", pendidikan: "S1" },
+  { nama: "Suriadi", jabatan: "Sekretaris Desa", pendidikan: "SMA" },
+  { nama: "Nurwahidah", jabatan: "Kaur Keuangan", masaJabatan: "2020–Sekarang", pendidikan: "D3 Akuntansi" },
+  { nama: "Hamzah", jabatan: "Kaur Perencanaan", masaJabatan: "2022–Sekarang", pendidikan: "S1 Adm. Publik" },
+  { nama: "Hardianto", jabatan: "Kaur Umum", masaJabatan: "2022–Sekarang", pendidikan: "S1 Adm. Publik" },
+  { nama: "Salellah", jabatan: "Kasi Pemerintahan", masaJabatan: "2020–Sekarang", pendidikan: "S1 Hukum" },
+  { nama: "Nuraeni", jabatan: "Kasi Kesejahteraan", masaJabatan: "2021–Sekarang", pendidikan: "S1 Kesehatan Masyarakat" },
+  { nama: "Paramita", jabatan: "Kasi Pelayanan & Administrasi", masaJabatan: "2021–Sekarang", pendidikan: "S1 Komunikasi" },
+  { nama: "H. Syaparuddin Lanti", jabatan: "Kepala Dusun Je'netalassa", masaJabatan: "2018–Sekarang", pendidikan: "SMA" },
+  { nama: "Sunarti", jabatan: "Kepala Dusun Balang Punia", masaJabatan: "2019–Sekarang", pendidikan: "SMA" },
+  { nama: "Remando", jabatan: "Kepala Dusun Biring Romang", masaJabatan: "2019–Sekarang", pendidikan: "SMA" },
+  { nama: "H. Azwar Hamid", jabatan: "Kepala Dusun Saile", masaJabatan: "2019–Sekarang", pendidikan: "SMA" },
+  { nama: "Hamirullah", jabatan: "Kepala Dusun Tanakarang", masaJabatan: "2019–Sekarang", pendidikan: "SMA" },
 ];
 
-// --- Struktur organisasi: relasi jabatan ---
+// Struktur organisasi
 const struktur = [
   {
     jabatan: "Kepala Desa",
@@ -36,18 +26,22 @@ const struktur = [
       {
         jabatan: "Sekretaris Desa",
         anak: [
-          { jabatan: "Kaur Umum & Perencanaan" },
+          { jabatan: "Kaur Umum" },
+          { jabatan: "Kaur Perencanaan" },
           { jabatan: "Kaur Keuangan" },
         ],
       },
       { jabatan: "Kasi Pemerintahan" },
       { jabatan: "Kasi Kesejahteraan" },
-      { jabatan: "Kasi Pelayanan" },
+      { jabatan: "Kasi Pelayanan & Administrasi" },
       {
         jabatan: "Kepala Dusun",
         anak: [
-          { jabatan: "Kepala Dusun A" },
-          { jabatan: "Kepala Dusun B" },
+          { jabatan: "Kepala Dusun Je'netalassa" },
+          { jabatan: "Kepala Dusun Balang Punia" },
+          { jabatan: "Kepala Dusun Biring Romang" },
+          { jabatan: "Kepala Dusun Saile" },
+          { jabatan: "Kepala Dusun Tanakarang" },
         ],
       },
     ],
@@ -65,7 +59,9 @@ function getInitials(name: string) {
 
 function Card({ children }: { children: React.ReactNode }) {
   return (
-    <div className="bg-white rounded-2xl shadow p-4 md:p-6 border border-gray-100">{children}</div>
+    <div className="bg-white rounded-2xl shadow p-4 md:p-6 border border-gray-100">
+      {children}
+    </div>
   );
 }
 
@@ -88,23 +84,13 @@ function ProfilCard({ p }: { p: typeof perangkat[number] }) {
       className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4"
     >
       <div className="flex items-center gap-4">
-        {p.img ? (
-          <img
-            src={p.img}
-            alt={p.nama}
-            className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-green-600"
-          />
-        ) : (
-          <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold">
-            {getInitials(p.nama)}
-          </div>
-        )}
+
 
         <div className="min-w-0">
           <p className="text-base md:text-lg font-semibold text-gray-900 truncate">{p.nama}</p>
           <p className="text-sm text-green-700 font-medium">{p.jabatan}</p>
           <p className="text-xs text-gray-500">{p.pendidikan}</p>
-          <p className="text-xs text-gray-500">{p.masaJabatan}</p>
+          {p.masaJabatan && <p className="text-xs text-gray-500">{p.masaJabatan}</p>}
         </div>
       </div>
     </motion.div>
