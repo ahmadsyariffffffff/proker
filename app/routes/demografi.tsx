@@ -25,7 +25,7 @@ const sampleData: DemografiData = {
     Pedagang: 54,
     "PNS/ASN": 32,
     Wiraswasta: 0,
-    Buruh: 184,
+    Buruh: 187,
     Pesiunan: 4,
     TidakBekerja: 908,
     Lainnya: 287,
@@ -38,7 +38,7 @@ function numberWithSeparator(n: number) {
 }
 
 export default function Demografi({ data = sampleData }: { data?: DemografiData }) {
-  const [filterJob, setFilterJob] = useState<string>("Semua");
+
 
   const jobList = useMemo(() => {
     return ["Semua", ...Object.keys(data.mataPencaharian)];
@@ -80,19 +80,6 @@ export default function Demografi({ data = sampleData }: { data?: DemografiData 
         </div>
 
         <div className="flex gap-3 items-center">
-          {/* Dropdown filter pekerjaan */}
-          <select
-            value={filterJob}
-            onChange={(e) => setFilterJob(e.target.value)}
-            className="rounded-lg border border-gray-300 px-3 py-2 w-full md:w-40 focus:outline-none"
-          >
-            {jobList.map((j) => (
-              <option key={j} value={j}>
-                {j}
-              </option>
-            ))}
-          </select>
-
           <button
             onClick={exportCSV}
             className="bg-green-600 text-white px-4 py-2 rounded-lg shadow hover:bg-green-700"
