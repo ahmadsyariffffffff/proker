@@ -84,7 +84,11 @@ function ProfilCard({ p }: { p: typeof perangkat[number] }) {
       className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4"
     >
       <div className="flex items-center gap-4">
-
+        (
+          <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold">
+            {getInitials(p.nama)}
+          </div>
+        )
 
         <div className="min-w-0">
           <p className="text-base md:text-lg font-semibold text-gray-900 truncate">{p.nama}</p>
