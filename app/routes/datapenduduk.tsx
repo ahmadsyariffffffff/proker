@@ -6,19 +6,22 @@ import {
 
 export default function DataKependudukan() {
   const dataKependudukan = {
-    jumlahPenduduk: 3200,
-    jumlahKK: 850,
+    jumlahPenduduk: 2200,
+    jumlahKK: 769,
     pendidikan: [
-      { tingkat: "SD", jumlah: 600 },
-      { tingkat: "SMP", jumlah: 450 },
-      { tingkat: "SMA", jumlah: 300 },
-      { tingkat: "Sarjana", jumlah: 120 },
+      { tingkat: "Pra Sekolah", jumlah: 708 },
+      { tingkat: "SD", jumlah: 603 },
+      { tingkat: "SMP", jumlah: 634 },
+      { tingkat: "SMA", jumlah: 502 },
+      { tingkat: "Sarjana", jumlah: 201 },
     ],
     pekerjaan: [
-      { jenis: "Petani", jumlah: 800 },
-      { jenis: "Pedagang", jumlah: 200 },
-      { jenis: "PNS", jumlah: 50 },
-      { jenis: "Lainnya", jumlah: 100 },
+      { jenis: "Petani", jumlah: 823 },
+      { jenis: "Pedagang", jumlah: 54 },
+      { jenis: "PNS", jumlah: 32 },
+      { jenis: "Buruh", jumlah: 184 },
+      { jenis: "Pensiunan", jumlah: 4 },
+      { jenis: "Lainnya", jumlah: 287 },
     ],
   };
 
