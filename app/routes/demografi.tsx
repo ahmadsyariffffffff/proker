@@ -30,11 +30,7 @@ const sampleData: DemografiData = {
     TidakBekerja: 908,
     Lainnya: 287,
   },
-  households: [
-    { id: "", namaKepala: "Ahmad", jumlahAnggota: 5, pekerjaan: "Petani", alamat: "Dusun A" },
-    { id: "KK-002", namaKepala: "Siti", jumlahAnggota: 4, pekerjaan: "Pedagang", alamat: "Dusun B" },
-    { id: "KK-003", namaKepala: "Budi", jumlahAnggota: 3, pekerjaan: "Nelayan", alamat: "Dusun A" },
-  ],
+  households: [],
 };
 
 function numberWithSeparator(n: number) {
@@ -108,7 +104,7 @@ export default function Demografi({ data = sampleData }: { data?: DemografiData 
       </header>
 
       {/* Summary cards */}
-      <section className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+      <section className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
         <div className="bg-white rounded-2xl p-4 shadow border border-gray-100">
           <p className="text-sm text-gray-500">Total Penduduk</p>
           <p className="text-2xl font-bold text-gray-900">{numberWithSeparator(data.totalPenduduk)}</p>
@@ -116,12 +112,6 @@ export default function Demografi({ data = sampleData }: { data?: DemografiData 
         <div className="bg-white rounded-2xl p-4 shadow border border-gray-100">
           <p className="text-sm text-gray-500">Total KK</p>
           <p className="text-2xl font-bold text-gray-900">{numberWithSeparator(data.totalKK)}</p>
-        </div>
-        <div className="bg-white rounded-2xl p-4 shadow border border-gray-100">
-          <p className="text-sm text-gray-500">Rata-rata Anggota / KK</p>
-          <p className="text-2xl font-bold text-gray-900">
-            {Math.round((data.totalPenduduk / Math.max(1, data.totalKK)) * 10) / 10}
-          </p>
         </div>
       </section>
 
