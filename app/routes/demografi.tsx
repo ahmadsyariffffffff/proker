@@ -13,20 +13,22 @@ type DemografiData = {
   totalPenduduk: number;
   totalKK: number;
   mataPencaharian: Record<string, number>;
-  households: HouseHold[]; // contoh data KK
+  households: HouseHold[]; 
 };
 
 const sampleData: DemografiData = {
-  totalPenduduk: 3250,
+  totalPenduduk: 2.200,
   totalKK: 820,
   mataPencaharian: {
-    Petani: 380,
-    Nelayan: 120,
-    Pedagang: 210,
-    "PNS/ASN": 45,
-    Wiraswasta: 60,
-    Buruh: 90,
-    Lainnya: 15,
+    Petani: 823,
+    Nelayan: 0,
+    Pedagang: 54,
+    "PNS/ASN": 32,
+    Wiraswasta: 0,
+    Buruh: 184,
+    Pesiunan: 4,
+    TidakBekerja: 908,
+    Lainnya: 287,
   },
   households: [
     { id: "KK-001", namaKepala: "Ahmad", jumlahAnggota: 5, pekerjaan: "Petani", alamat: "Dusun A" },

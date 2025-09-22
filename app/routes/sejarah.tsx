@@ -44,7 +44,7 @@ export default function Sejarah() {
       <section className="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">
         <h2 className="text-xl font-semibold text-green-700 mb-3">Misi</h2>
         <p className="text-gray-700 leading-relaxed">
-            <ul className="list-decimal list-inside text-gray-700 leading-relaxed text-justify space-y-2">
+            <ul className="list-decimal list-inside text-gray-700 leading-relaxed text-justify space-y-2 font-bold">
   <li>Meningkatkan pembangunan infrastruktur yang mendukung perekonomian desa, seperti jalan, jembatan serta infrastruktur strategis lainnya.</li>
   <li>Meningkatkan pembangunan di bidang kesehatan untuk mendorong derajat kesehatan masyarakat agar dapat bekerja lebih optimal dan memiliki harapan hidup yang lebih panjang.</li>
   <li>Meningkatkan pembangunan di bidang pendidikan untuk mendorong peningkatan kualitas sumber daya manusia agar memiliki kecerdasan dan daya saing yang lebih baik.</li>
