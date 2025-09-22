@@ -19,18 +19,21 @@ export default function Sejarah() {
         <h2 className="text-xl font-semibold text-green-700 mb-3">
           Sejarah Desa
         </h2>
-        <p className="text-gray-700 leading-relaxed">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis,
-          iure, ratione enim inventore voluptatum ipsum, nisi maiores mollitia
-          itaque accusantium sequi adipisci perferendis amet deleniti labore
-          expedita et fuga suscipit?
+        <p className="text-gray-700 leading-relaxed font-bold">
+          "Desa Panaikang merupakan hasil pemekaran dari Desa Pallantikang dan Desa Pacellekang 
+          yang pada awalnya berada dalam wilayah Kecamatan Bontomarannu Kabupaten Gowa. Sejak 
+          tahun 2004, Desa Panaikang resmi menjadi desa definitif dan masuk dalam wilayah Kecamatan 
+          Pattallassang. Pada periode awal, desa ini dipimpin oleh Muh. Said Dg. Mangati (Alm.) sebelum 
+          dilanjutkan oleh beberapa kepala desa berikutnya, hingga pada tahun 2007 terpilih Ismail G. yang
+          memimpin hingga kini. Dalam perjalanan pemerintahannya, Desa Panaikang terus mengalami perkembangan
+          dengan dukungan perangkat desa, kepala dusun, serta tokoh agama yang berperan aktif dalam membangun masyarakat."
         </p>
       </section>
 
       {/* Visi */}
       <section className="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">
         <h2 className="text-xl font-semibold text-green-700 mb-3">Visi</h2>
-        <p className="text-gray-700 leading-relaxed">
+        <p className="text-gray-700 leading-relaxed font-bold">
           “Terwujudnya Panaikang sebagai Desa yang mandiri berbasis Pertanian, 
           Perkebunan, Perikanan, Perdagangan dan Perindustrian untuk mencapai 
           masyarakat yang sehat, cerdas dan lebih sejahtera.”
