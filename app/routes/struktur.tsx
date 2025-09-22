@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Search, Users, Network, ChevronDown, ChevronUp } from "lucide-react";
 
 const perangkat = [
-  { nama: "Ismail G.SE", jabatan: "Kepala Desa", pendidikan: "S1" },
+  { nama: "Ismail G.SE", jabatan: "Kepala Desa", pendidikan: "S1 Ekonomi" },
   { nama: "Suriadi", jabatan: "Sekretaris Desa", pendidikan: "SMA" },
   { nama: "Nurwahidah", jabatan: "Kaur Keuangan", masaJabatan: "2020–Sekarang", pendidikan: "D3 Akuntansi" },
   { nama: "Hamzah", jabatan: "Kaur Perencanaan", masaJabatan: "2022–Sekarang", pendidikan: "S1 Adm. Publik" },
@@ -84,11 +84,9 @@ function ProfilCard({ p }: { p: typeof perangkat[number] }) {
       className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4"
     >
       <div className="flex items-center gap-4">
-        (
           <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold">
             {getInitials(p.nama)}
           </div>
-        )
 
         <div className="min-w-0">
           <p className="text-base md:text-lg font-semibold text-gray-900 truncate">{p.nama}</p>
