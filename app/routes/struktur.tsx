@@ -3,19 +3,19 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Search, Users, Network, ChevronDown, ChevronUp } from "lucide-react";
 
 const perangkat = [
-  { nama: "Ismail G.SE", jabatan: "Kepala Desa", pendidikan: "S1 Ekonomi" },
-  { nama: "Suriadi", jabatan: "Sekretaris Desa", pendidikan: "SMA" },
-  { nama: "Nurwahidah", jabatan: "Kaur Keuangan", masaJabatan: "2020–Sekarang", pendidikan: "D3 Akuntansi" },
-  { nama: "Hamzah", jabatan: "Kaur Perencanaan", masaJabatan: "2022–Sekarang", pendidikan: "S1 Adm. Publik" },
-  { nama: "Hardianto", jabatan: "Kaur Umum", masaJabatan: "2022–Sekarang", pendidikan: "S1 Adm. Publik" },
-  { nama: "Salellah", jabatan: "Kasi Pemerintahan", masaJabatan: "2020–Sekarang", pendidikan: "S1 Hukum" },
-  { nama: "Nuraeni", jabatan: "Kasi Kesejahteraan", masaJabatan: "2021–Sekarang", pendidikan: "S1 Kesehatan Masyarakat" },
-  { nama: "Paramita", jabatan: "Kasi Pelayanan & Administrasi", masaJabatan: "2021–Sekarang", pendidikan: "S1 Komunikasi" },
-  { nama: "H. Syaparuddin Lanti", jabatan: "Kepala Dusun Je'netalassa", masaJabatan: "2018–Sekarang", pendidikan: "SMA" },
-  { nama: "Sunarti", jabatan: "Kepala Dusun Balang Punia", masaJabatan: "2019–Sekarang", pendidikan: "SMA" },
-  { nama: "Remando", jabatan: "Kepala Dusun Biring Romang", masaJabatan: "2019–Sekarang", pendidikan: "SMA" },
-  { nama: "H. Azwar Hamid", jabatan: "Kepala Dusun Saile", masaJabatan: "2019–Sekarang", pendidikan: "SMA" },
-  { nama: "Hamirullah", jabatan: "Kepala Dusun Tanakarang", masaJabatan: "2019–Sekarang", pendidikan: "SMA" },
+  { nama: "Ismail G.SE", jabatan: "Kepala Desa", masajabatan: "2007-sekarang", pendidikan: "S1 Ekonomi" },
+  { nama: "Suriadi", jabatan: "Sekretaris Desa",masajabatan: "2000-sekarang", pendidikan: "S1" },
+  { nama: "Nurwahidah", jabatan: "Kaur Keuangan", masaJabatan: "2022–Sekarang", pendidikan: "S1" },
+  { nama: "Hamzah", jabatan: "Kaur Perencanaan", masaJabatan: "2015–Sekarang", pendidikan: "SMA" },
+  { nama: "Hardianto", jabatan: "Kaur Umum", masaJabatan: "2016–Sekarang", pendidikan: "S1" },
+  { nama: "Salellah", jabatan: "Kasi Pemerintahan", masaJabatan: "2007–Sekarang", pendidikan: "SMA" },
+  { nama: "Nuraeni", jabatan: "Kasi Kesejahteraan", masaJabatan: "2007–Sekarang", pendidikan: "SMA" },
+  { nama: "Paramita", jabatan: "Kasi Pelayanan & Administrasi", masaJabatan: "2017–Sekarang", pendidikan: "SMK" },
+  { nama: "H. Syaparuddin Lanti", jabatan: "Kepala Dusun Je'netalassa", masaJabatan: "2007–Sekarang", pendidikan: "SMA" },
+  { nama: "Sunarti", jabatan: "Kepala Dusun Balang Punia", masaJabatan: "2022–Sekarang", pendidikan: "SMA" },
+  { nama: "Remando", jabatan: "Kepala Dusun Biring Romang", masaJabatan: "2003–Sekarang", pendidikan: "SMA" },
+  { nama: "H. Azwar Hamid", jabatan: "Kepala Dusun Saile", masaJabatan: "2018–Sekarang", pendidikan: "SMA" },
+  { nama: "Hamirullah", jabatan: "Kepala Dusun Tanakarang", masaJabatan: "2018–Sekarang", pendidikan: "SMA" },
 ];
 
 // Struktur organisasi

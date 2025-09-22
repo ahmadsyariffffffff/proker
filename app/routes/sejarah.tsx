@@ -47,7 +47,7 @@ export default function Sejarah() {
         4.	Meningkatkan pembangunan ekonomi dengan mendorong semakin tumbuh dan   berkembangnya pembangunan dibidang pertanian dalam arti luas, industri, perdagangan dan pariwisata.
         5.	Menciptakan tata kelola pemerintahan yang baik (good governance) berdasarkan demokratisasi, transparansi, penegakan hukum,berkeadilan, kesetaraan gender dan mengutamakan pelayanankepada masyarakat.
         6.	Mengupayakan pelestarian sumber daya alam untuk memenuhi kebutuhandan pemerataan pembangunan guna meningkatkan perekonomian.
-            <br>buatkan dalam bentuk paragraf</br>
+            buatkan dalam bentuk paragraf
         </p>
       </section>
 
