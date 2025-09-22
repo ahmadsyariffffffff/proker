@@ -13,36 +13,14 @@ type DemografiData = {
   totalPenduduk: number;
   totalKK: number;
   mataPencaharian: Record<string, number>;
-  households: HouseHold[]; 
-};
-
-const sampleData: DemografiData = {
-  totalPenduduk: 2.200,
-  totalKK: 820,
-  mataPencaharian: {
-    Petani: 823,
-    Nelayan: 0,
-    Pedagang: 54,
-    "PNS/ASN": 32,
-    Wiraswasta: 0,
-    Buruh: 184,
-    Pesiunan: 4,
-    TidakBekerja: 908,
-    Lainnya: 287,
-  },
-  households: [
-    { id: "KK-001", namaKepala: "Ahmad", jumlahAnggota: 5, pekerjaan: "Petani", alamat: "Dusun A" },
-    { id: "KK-002", namaKepala: "Siti", jumlahAnggota: 4, pekerjaan: "Pedagang", alamat: "Dusun B" },
-    { id: "KK-003", namaKepala: "Budi", jumlahAnggota: 3, pekerjaan: "Nelayan", alamat: "Dusun A" },
-  ],
+  households: HouseHold[];
 };
 
 function numberWithSeparator(n: number) {
   return n.toLocaleString("id-ID");
 }
 
-export default function Demografi({ data = sampleData }: { data?: DemografiData }) {
-  const [q, setQ] = useState("");
+export default function Demografi({ data }: { data: DemografiData }) {
   const [filterJob, setFilterJob] = useState<string>("Semua");
 
   const jobList = useMemo(() => {
@@ -50,17 +28,10 @@ export default function Demografi({ data = sampleData }: { data?: DemografiData 
   }, [data]);
 
   const filteredHouseholds = useMemo(() => {
-    const term = q.trim().toLowerCase();
     return data.households.filter((h) => {
-      const matchJob = filterJob === "Semua" ? true : h.pekerjaan === filterJob;
-      const matchQ =
-        !term ||
-        h.id.toLowerCase().includes(term) ||
-        h.namaKepala.toLowerCase().includes(term) ||
-        (h.alamat || "").toLowerCase().includes(term);
-      return matchJob && matchQ;
+      return filterJob === "Semua" ? true : h.pekerjaan === filterJob;
     });
-  }, [data, q, filterJob]);
+  }, [data, filterJob]);
 
   // Untuk bar chart sederhana: normalisasi ke 100%
   const maxJobCount = Math.max(...Object.values(data.mataPencaharian), 1);
@@ -98,49 +69,18 @@ export default function Demografi({ data = sampleData }: { data?: DemografiData 
         </div>
 
         <div className="flex gap-3 items-center">
-         {/* Filter versi desktop */}
-<div className="hidden md:flex gap-2">
-  <input
-    value={q}
-    onChange={(e) => setQ(e.target.value)}
-    placeholder="Cari KK / nama kepala / alamat..."
-    className="rounded-lg border border-gray-300 px-3 py-2 w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-green-600"
-  />
-  <select
-    value={filterJob}
-    onChange={(e) => setFilterJob(e.target.value)}
-    className="rounded-lg border border-gray-300 px-3 py-2 w-full md:w-40 focus:outline-none"
-  >
-    {jobList.map((j) => (
-      <option key={j} value={j}>
-        {j}
-      </option>
-    ))}
-  </select>
-</div>
-
-{/* Filter versi mobile */}
-<div className="flex md:hidden gap-2 w-full">
-  <input
-    value={q}
-    onChange={(e) => setQ(e.target.value)}
-    placeholder="Cari..."
-    className="rounded-lg border border-gray-300 px-4 py-3 w-3/4 text-base focus:outline-none focus:ring-2 focus:ring-green-600"
-  />
-  <select
-    value={filterJob}
-    onChange={(e) => setFilterJob(e.target.value)}
-    className="rounded-lg border border-gray-300 px-3 py-3 w-1/4 text-sm focus:outline-none"
-  >
-    {jobList.map((j) => (
-      <option key={j} value={j}>
-        {j}
-      </option>
-    ))}
-  </select>
-</div>
-
-
+          {/* Filter Pekerjaan */}
+          <select
+            value={filterJob}
+            onChange={(e) => setFilterJob(e.target.value)}
+            className="rounded-lg border border-gray-300 px-3 py-2 w-full md:w-40 focus:outline-none"
+          >
+            {jobList.map((j) => (
+              <option key={j} value={j}>
+                {j}
+              </option>
+            ))}
+          </select>
 
           <button
             onClick={exportCSV}
@@ -196,22 +136,6 @@ export default function Demografi({ data = sampleData }: { data?: DemografiData 
       <section className="bg-white rounded-2xl p-4 shadow border border-gray-100">
         <div className="flex items-center justify-between mb-4">
           <h3 className="font-semibold text-lg">Daftar KK</h3>
-
-          {/* Filter versi mobile */}
-<div className="flex md:hidden gap-2 w-full">
-  <select
-    value={filterJob}
-    onChange={(e) => setFilterJob(e.target.value)}
-    className="rounded-lg border border-gray-300 px-3 py-2 w-full focus:outline-none"
-  >
-    {jobList.map((j) => (
-      <option key={j} value={j}>
-        {j}
-      </option>
-    ))}
-  </select>
-</div>
-
         </div>
 
         <div className="overflow-x-auto">
