@@ -41,13 +41,15 @@ export default function Sejarah() {
       <section className="bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition">
         <h2 className="text-xl font-semibold text-green-700 mb-3">Misi</h2>
         <p className="text-gray-700 leading-relaxed">
-        1.	Meningkatkan pembangunan infrastruktur yang mendukung perekonomian desa,seperti jalan, jembatan serta infrastruktur strategis lainnya 
-        2.	Meningkatkan pembangunan dibidang kesehatan untuk mendorong derajat Kesehatan masyarakat agar dapat bekerja lebih optimal dan memiliki harapanhidup yang lebih panjang.
-        3.	Meningkatkan pembangunan dibidang pendidikan untuk mendorong peningkatan kualitas sumber daya manusia agar memiliki kecerdasan dan daya saing yanglebih baik.
-        4.	Meningkatkan pembangunan ekonomi dengan mendorong semakin tumbuh dan   berkembangnya pembangunan dibidang pertanian dalam arti luas, industri, perdagangan dan pariwisata.
-        5.	Menciptakan tata kelola pemerintahan yang baik (good governance) berdasarkan demokratisasi, transparansi, penegakan hukum,berkeadilan, kesetaraan gender dan mengutamakan pelayanankepada masyarakat.
-        6.	Mengupayakan pelestarian sumber daya alam untuk memenuhi kebutuhandan pemerataan pembangunan guna meningkatkan perekonomian.
-            buatkan dalam bentuk paragraf
+          <p className="text-gray-700 leading-relaxed">
+  1. Meningkatkan pembangunan infrastruktur yang mendukung perekonomian desa, seperti jalan, jembatan serta infrastruktur strategis lainnya.<br />
+  2. Meningkatkan pembangunan di bidang kesehatan untuk mendorong derajat kesehatan masyarakat agar dapat bekerja lebih optimal dan memiliki harapan hidup yang lebih panjang.<br />
+  3. Meningkatkan pembangunan di bidang pendidikan untuk mendorong peningkatan kualitas sumber daya manusia agar memiliki kecerdasan dan daya saing yang lebih baik.<br />
+  4. Meningkatkan pembangunan ekonomi dengan mendorong semakin tumbuh dan berkembangnya pembangunan di bidang pertanian, industri, perdagangan, dan pariwisata.<br />
+  5. Menciptakan tata kelola pemerintahan yang baik (good governance) berdasarkan demokratisasi, transparansi, penegakan hukum, berkeadilan, kesetaraan gender, dan pelayanan kepada masyarakat.<br />
+  6. Mengupayakan pelestarian sumber daya alam untuk memenuhi kebutuhan dan pemerataan pembangunan guna meningkatkan perekonomian.
+</p>
+
         </p>
       </section>
 
