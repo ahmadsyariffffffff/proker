@@ -16,22 +16,37 @@ type DemografiData = {
   households: HouseHold[];
 };
 
+const sampleData: DemografiData = {
+  totalPenduduk: 2200,
+  totalKK: 769,
+  mataPencaharian: {
+    Petani: 823,
+    Nelayan: 0,
+    Pedagang: 54,
+    "PNS/ASN": 32,
+    Wiraswasta: 0,
+    Buruh: 184,
+    Pesiunan: 4,
+    TidakBekerja: 908,
+    Lainnya: 287,
+  },
+  households: [
+    { id: "", namaKepala: "Ahmad", jumlahAnggota: 5, pekerjaan: "Petani", alamat: "Dusun A" },
+    { id: "KK-002", namaKepala: "Siti", jumlahAnggota: 4, pekerjaan: "Pedagang", alamat: "Dusun B" },
+    { id: "KK-003", namaKepala: "Budi", jumlahAnggota: 3, pekerjaan: "Nelayan", alamat: "Dusun A" },
+  ],
+};
+
 function numberWithSeparator(n: number) {
   return n.toLocaleString("id-ID");
 }
 
-export default function Demografi({ data }: { data: DemografiData }) {
+export default function Demografi({ data = sampleData }: { data?: DemografiData }) {
   const [filterJob, setFilterJob] = useState<string>("Semua");
 
   const jobList = useMemo(() => {
     return ["Semua", ...Object.keys(data.mataPencaharian)];
   }, [data]);
-
-  const filteredHouseholds = useMemo(() => {
-    return data.households.filter((h) => {
-      return filterJob === "Semua" ? true : h.pekerjaan === filterJob;
-    });
-  }, [data, filterJob]);
 
   // Untuk bar chart sederhana: normalisasi ke 100%
   const maxJobCount = Math.max(...Object.values(data.mataPencaharian), 1);
@@ -69,7 +84,7 @@ export default function Demografi({ data }: { data: DemografiData }) {
         </div>
 
         <div className="flex gap-3 items-center">
-          {/* Filter Pekerjaan */}
+          {/* Dropdown filter pekerjaan */}
           <select
             value={filterJob}
             onChange={(e) => setFilterJob(e.target.value)}
@@ -129,53 +144,6 @@ export default function Demografi({ data }: { data: DemografiData }) {
               </div>
             );
           })}
-        </div>
-      </section>
-
-      {/* Table KK */}
-      <section className="bg-white rounded-2xl p-4 shadow border border-gray-100">
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="font-semibold text-lg">Daftar KK</h3>
-        </div>
-
-        <div className="overflow-x-auto">
-          <table className="w-full text-left table-auto">
-            <thead className="text-sm text-gray-600 border-b">
-              <tr>
-                <th className="py-2 px-3">ID KK</th>
-                <th className="py-2 px-3">Nama Kepala</th>
-                <th className="py-2 px-3">Jumlah Anggota</th>
-                <th className="py-2 px-3">Pekerjaan</th>
-                <th className="py-2 px-3">Alamat</th>
-              </tr>
-            </thead>
-            <tbody>
-              {filteredHouseholds.map((h) => (
-                <tr key={h.id} className="hover:bg-gray-50">
-                  <td className="py-3 px-3 text-sm text-gray-700">{h.id}</td>
-                  <td className="py-3 px-3 text-sm text-gray-700">{h.namaKepala}</td>
-                  <td className="py-3 px-3 text-sm text-gray-700">{h.jumlahAnggota}</td>
-                  <td className="py-3 px-3 text-sm text-gray-700">{h.pekerjaan}</td>
-                  <td className="py-3 px-3 text-sm text-gray-700">{h.alamat}</td>
-                </tr>
-              ))}
-
-              {filteredHouseholds.length === 0 && (
-                <tr>
-                  <td colSpan={5} className="py-6 px-3 text-center text-sm text-gray-500">
-                    Tidak ada data.
-                  </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
-        </div>
-
-        <div className="mt-4 flex justify-between items-center">
-          <p className="text-sm text-gray-500">
-            Menampilkan {filteredHouseholds.length} dari {data.households.length} KK
-          </p>
-          <div className="text-sm text-gray-500">Sumber: Data Lokal</div>
         </div>
       </section>
     </div>
