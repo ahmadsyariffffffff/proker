@@ -68,16 +68,6 @@ export default function Sejarah() {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </section>
-
-      {/* Tombol kembali */}
-      <div className="text-center">
-        <Link
-          to="/"
-          className="inline-block px-6 py-2 bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700 transition"
-        >
-          Kembali ke Home
-        </Link>
-      </div>
     </div>
   );
 }
