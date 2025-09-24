@@ -3,9 +3,9 @@ import React from "react";
 export default function ArtikelPotensi() {
   const artikel = [
     {
-      judul: "Wisata Alam Sungai Jernih",
-      isi: "Sungai Jernih menjadi destinasi wisata unggulan desa dengan pemandangan alam yang asri.",
-      gambar: "https://source.unsplash.com/800x500/?river,nature",
+      judul: "Pembuatan abon ikan",
+      isi: "Pembuatan abon ikan dapat meningkatkan umkm desa.",
+      gambar: "abon.jpg",
     },
     {
       judul: "UMKM Keripik Singkong",
