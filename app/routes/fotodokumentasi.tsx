@@ -4,7 +4,7 @@ export default function FotoKegiatan() {
   const kegiatan = [
     {
       judul: "Gotong Royong Bersih Masjid",
-      deskripsi: "Warga desa bergotong royong membersihkan lingkungan masjid agar tetap terlihat.",
+      deskripsi: "Warga desa bergotong royong membersihkan lingkungan masjid agar tetap terlihat bersih.",
       gambar: "royong.jpg",
     },
     {
