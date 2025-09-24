@@ -19,7 +19,6 @@ export default [
     route("/umkm", "routes/umkm.tsx"),
     route("/fasilitas", "routes/fasilitas.tsx"),
     route("/kegiatan", "routes/kegiatan.tsx"),
-    route("/pengumuman", "routes/pengumuman.tsx"),
     route("/artikel", "routes/artikel.tsx"),
     route("/fotodokumentasi", "routes/fotodokumentasi.tsx"),
     route("/video", "routes/video.tsx"),

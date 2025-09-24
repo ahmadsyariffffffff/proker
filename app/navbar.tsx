@@ -80,7 +80,6 @@ export default function Navbar() {
                 <Link to="/umkm" className="block px-4 py-2 hover:bg-gray-200" onClick={() => setOpenMenu(null)}>UMKM</Link>
                 <Link to="/fasilitas" className="block px-4 py-2 hover:bg-gray-200" onClick={() => setOpenMenu(null)}>Fasilitas</Link>
                 <Link to="/kegiatan" className="block px-4 py-2 hover:bg-gray-200" onClick={() => setOpenMenu(null)}>Kegiatan</Link>
-                <Link to="/pengumuman" className="block px-4 py-2 hover:bg-gray-200" onClick={() => setOpenMenu(null)}>Pengumuman</Link>
                 <Link to="/artikel" className="block px-4 py-2 hover:bg-gray-200" onClick={() => setOpenMenu(null)}>Artikel</Link>
                 <Link to="/fotodokumentasi" className="block px-4 py-2 hover:bg-gray-200" onClick={() => setOpenMenu(null)}>Foto Dokumentasi</Link>
                 <Link to="/video" className="block px-4 py-2 hover:bg-gray-200" onClick={() => setOpenMenu(null)}>Video</Link>
