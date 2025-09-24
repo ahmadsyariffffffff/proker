@@ -3,24 +3,24 @@ import React from "react";
 export default function FotoKegiatan() {
   const kegiatan = [
     {
-      judul: "Gotong Royong Bersih Desa",
-      deskripsi: "Warga desa bergotong royong membersihkan lingkungan agar tetap sehat dan nyaman.",
-      gambar: "https://source.unsplash.com/600x400/?village,cleaning",
+      judul: "Gotong Royong Bersih Masjid",
+      deskripsi: "Warga desa bergotong royong membersihkan lingkungan masjid agar tetap terlihat.",
+      gambar: "royong.jpg",
     },
     {
-      judul: "Festival Budaya Desa",
-      deskripsi: "Acara tahunan menampilkan seni, musik, dan budaya khas desa.",
-      gambar: "https://source.unsplash.com/600x400/?festival,tradition",
+      judul: "Ramah Tamah 17 Agustus",
+      deskripsi: "Acara ramah tamah 17 agustus di desa panikang.",
+      gambar: "ramah.jpg",
     },
     {
-      judul: "Panen Raya Padi",
-      deskripsi: "Kegiatan panen bersama di sawah yang menjadi simbol kebersamaan petani.",
-      gambar: "https://source.unsplash.com/600x400/?rice,harvest",
+      judul: "Gotong Royong Desa",
+      deskripsi: "Kegiatan mengali jalur air.",
+      gambar: "bakti2.jpg",
     },
     {
-      judul: "Pelatihan UMKM",
-      deskripsi: "Pelatihan bagi UMKM untuk meningkatkan kualitas produk dan pemasaran.",
-      gambar: "https://source.unsplash.com/600x400/?meeting,training",
+      judul: "Maulid Nabi",
+      deskripsi: "Merayakan maulid nabi.",
+      gambar: "maulid.jpg",
     },
   ];
 
