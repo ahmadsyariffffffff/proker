@@ -6,21 +6,18 @@ export default function DataUmkm() {
       nama: "Abon",
       jenis: "Kuliner",
       produk: "Abon Ikan Gabus",
-      kontak: "6281234567890",
       gambar: "/abon.jpg",
     },
     {
       nama: "Kerajinan Rotan Makmur",
       jenis: "Kerajinan",
       produk: "Kursi, Meja, Anyaman Rotan",
-      kontak: "6282155554444",
       gambar: "https://via.placeholder.com/300x200.png?text=Kerajinan",
     },
     {
       nama: "Tani Jaya",
       jenis: "Pertanian",
       produk: "Beras Organik, Sayur Mayur",
-      kontak: "6281322223333",
       gambar: "https://via.placeholder.com/300x200.png?text=Pertanian",
     },
   ];
@@ -31,20 +28,15 @@ export default function DataUmkm() {
         Data UMKM & Potensi Ekonomi Desa
       </h1>
       <p className="text-gray-600 mb-8">
-        Berikut adalah daftar UMKM dan potensi ekonomi desa. Klik pada salah
-        satu UMKM untuk langsung menghubungi pemilik usaha via WhatsApp.
+        Berikut adalah daftar UMKM dan potensi ekonomi desa.
       </p>
 
       <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
         {umkmList.map((umkm, idx) => (
-          <a
+          <div
             key={idx}
-            href={`https://wa.me/${umkm.kontak}`}
-            target="_blank"
-            rel="noopener noreferrer"
             className="block bg-white shadow-md rounded-2xl overflow-hidden hover:shadow-lg transition hover:scale-105"
           >
-            {/* Gambar harus full pas */}
             <img
               src={umkm.gambar}
               alt={umkm.nama}
@@ -62,7 +54,7 @@ export default function DataUmkm() {
                 <span className="font-medium">Produk:</span> {umkm.produk}
               </p>
             </div>
-          </a>
+          </div>
         ))}
       </div>
     </div>
