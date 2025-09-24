@@ -12,24 +12,24 @@ import {
 export default function DataFasilitas() {
   const fasilitas = [
     {
-      nama: "SD Negeri 1 Desa Makmur",
+      nama: "SD INPRES PANAIKANG",
       jenis: "Sekolah",
-      gambar: "/images/fasilitas/sd1.jpg",
+      gambar: "/sd.jpg",
     },
     {
-      nama: "Puskesmas Desa Sehat",
-      jenis: "Puskesmas",
-      gambar: "/images/fasilitas/puskesmas.jpg",
+      nama: "POSTU",
+      jenis: "Pos Kesehatan Desa",
+      gambar: "/postu.jpg",
     },
     {
-      nama: "Masjid Al-Ikhlas",
+      nama: "Masjid",
       jenis: "Tempat Ibadah",
-      gambar: "ahmad.png",
+      gambar: "masjid.jpg",
     },
     {
-      nama: "Gereja Santo Yosef",
-      jenis: "Tempat Ibadah",
-      gambar: "/images/fasilitas/gereja.jpg",
+      nama: "Taman Kanak-Kanak",
+      jenis: "Sekolah",
+      gambar: "/tk.jpg",
     },
   ];
 
