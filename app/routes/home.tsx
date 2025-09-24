@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div
       className="min-h-screen w-full bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/desa.jpg')" }}
+      style={{ backgroundImage: "url('/balai.jpg')" }}
     >
       {/* Overlay full tanpa rounded dan tanpa padding luar */}
       <div className="bg-black/40 min-h-screen w-full">
