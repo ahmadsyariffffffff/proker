@@ -4,15 +4,15 @@ export default function KegiatanDesa() {
   const kegiatan = [
     {
       judul: "Kerja Bakti Bersih Desa",
-      tanggal: "20 Agustus 2025",
-      isi: "Warga bergotong royong membersihkan jalan dan selokan desa.",
-      gambar: "https://source.unsplash.com/600x400/?community,cleaning",
+      tanggal: "2 Agustus 2025",
+      isi: "Warga bergotong royong membersihkan halaman desa.",
+      gambar: "/bakti.jpg",
     },
     {
       judul: "Festival Panen Raya",
-      tanggal: "10 September 2025",
-      isi: "Acara tahunan panen raya desa dengan lomba kuliner dan pameran UMKM.",
-      gambar: "https://source.unsplash.com/600x400/?festival,harvest",
+      tanggal: "18 September 2025",
+      isi: "Pelatihan membuat abon berbahan ikan.",
+      gambar: "abon.jpg",
     },
   ];
 
