@@ -8,18 +8,6 @@ export default function DataUmkm() {
       produk: "Abon Ikan Gabus",
       gambar: "/abon.jpg",
     },
-    {
-      nama: "Kerajinan Rotan Makmur",
-      jenis: "Kerajinan",
-      produk: "Kursi, Meja, Anyaman Rotan",
-      gambar: "https://via.placeholder.com/300x200.png?text=Kerajinan",
-    },
-    {
-      nama: "Tani Jaya",
-      jenis: "Pertanian",
-      produk: "Beras Organik, Sayur Mayur",
-      gambar: "https://via.placeholder.com/300x200.png?text=Pertanian",
-    },
   ];
 
   return (
