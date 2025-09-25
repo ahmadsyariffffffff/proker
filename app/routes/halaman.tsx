@@ -10,18 +10,13 @@ export default function Kontak() {
         <div className="space-y-4">
           <div className="bg-white shadow rounded-xl p-4">
             <h2 className="text-xl font-semibold mb-2">Alamat Kantor</h2>
-            <p>Jl. Raya Desa Makmur No. 10</p>
-            <p>Kec. Makmur, Kab. Bone</p>
-          </div>
-
-          <div className="bg-white shadow rounded-xl p-4">
-            <h2 className="text-xl font-semibold mb-2">Nomor Telepon / WA</h2>
-            <p>0812-3456-7890</p>
+            <p>Jl. Poros Pakkatto Pattallassang</p>
+            <p>Kec. Pattallassang, Kab. Gowa</p>
           </div>
 
           <div className="bg-white shadow rounded-xl p-4">
             <h2 className="text-xl font-semibold mb-2">Email Resmi</h2>
-            <p>desamakmur@gmail.com</p>
+            <p>desapanaikang@gmail.com email dummy</p>
           </div>
         </div>
 
